@@ -19,24 +19,26 @@ $tableauCivilite = [
     "Mademoiselle"
 ];
 
-// Structure du menu :
+// Ouverture du menu déroulant
 echo
 "<label for='Civilité'>Civilité</label>
 
 <select name='Civilité' id='Civilité'>
     <option value=>--Choisir une option--</option>";
-// Création d'une fonction qui va ajouter les choix au menu déroulant : 
+
+// Construction d'une fonction qui va ajouter les choix au menu déroulant : 
 function menuDeroulant($tableauAAfficher) {
 foreach($tableauAAfficher as $valeur) {
     echo "
     <option value='$valeur'>$valeur</option>";
 }
 }
-"</select>";
 
 // Afficher le menu déroulant : 
 menuDeroulant($tableauCivilite);
 
+// Fermeture du menu déroulant
+"</select>";
 
 // Création du menu déroulant html :
 ?>

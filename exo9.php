@@ -27,14 +27,13 @@ echo
 function afficherRadio($tableauAAfficher) {
     foreach($tableauAAfficher as $valeur) {
         echo "
-        <div>
+    <div>
         <input type='radio' id='choix' name='choix'
             value='$valeur' checked /> 
             <label for='choix'>$valeur</label>
     </div>";
     }
 }
-
 
 // Affichage du menu radio : 
 afficherRadio($genre);

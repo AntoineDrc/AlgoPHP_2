@@ -13,27 +13,32 @@ afficherInput($nomsInput);
 
 <?php
 
-// Tableau associatif qui contient le label/Clé(Nom) et sa valeur(Delubriac):
+// Tableau associatif qui contient le label/Clé(Nom) et sa valeur(Delubriac)
 $tableauInfos = [
     "Nom" => "Delubriac",
     "Prénom" => "Antoine",
     "Ville" => "Strasbourg"
 ];
 
-// Création d'une fonction qui va parcourir chaque élement du tableau : 
+// Création d'une fonction qui va parcourir chaque élement du tableau 
 function creationFormulaire($tableauAAfficher) {
-    echo "<form>"; // Ici on ouvre le tableau 
+
+// Ouverture du tableau
+    echo "<form>"; 
+
+// Création de la boucle
     foreach($tableauAAfficher as $cle => $valeur) {
             echo "
             <label for='$cle'>$cle</label><br> 
             <input type='text' value='$valeur'><br>";        
         }
-        echo "</form>";
-}
-
-// Création du tableau : 
-creationFormulaire($tableauInfos);
-
+    }
+    
+// Affichage du tableau 
+    creationFormulaire($tableauInfos);
+    
+// Fermeture du tableau
+    echo "</form>";
 ?>
 
 <!-- Création formulaire en html -->
