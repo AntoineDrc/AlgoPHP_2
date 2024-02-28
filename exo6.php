@@ -12,7 +12,7 @@ alimenterListeDeroulante($elements);
 
 <?php
 
-// Création d'un tableau numérique avec les donnés à affciher : 
+// Création d'un tableau numérique avec les donnés à afficher : 
 $tableauCivilite = [
     "Madame",
     "Monsieur",
