@@ -35,13 +35,13 @@ $capitales = array ("France"=>"Paris","Allemagne"=>"Berlin",
 // Création d'une boucle qui parcour les données du tableau : 
 foreach ($paysCapitales as $pays => $capitales) {
     echo 
-    "<tbody>
+    "
         <tr>
             <td>" . $pays . "</td>
             <td>" . $capitales . "</td>
             <td><a href='http://fr.wikipedia.org/wiki/$capitales' target='_blank' rel='noopener noreferrer'>Lien</a>
         </tr>
-    </tbody>";
+    ";
 }
 
 echo 

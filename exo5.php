@@ -13,15 +13,32 @@ afficherInput($nomsInput);
 
 <?php
 
-function creationFormulaire($nom, $prenom, $ville) {
+// Création d'un tableau numérique :
 
+$tableauInfos = [
+    "Nom",
+    "Prenom",
+    "Ville"
+];
+
+function creationFormulaire($infoPersonne) {
+    echo "<form>";
+    foreach($infoPersonne as $info) {
+            echo "
+            <label for='$info'>$info</label><br>
+            <input type='text' value=$info><br>";        
+    }
+    echo "</form>";
 }
+
+// Création du tableau : 
+creationFormulaire($tableauInfos);
 
 ?>
 
 <!-- Création formulaire en html -->
 
-<body>
+<!-- <body>
     <h2>Formulaire</h2>
     <form>
         <label for="fname">Nom :</label><br>
@@ -32,9 +49,4 @@ function creationFormulaire($nom, $prenom, $ville) {
         <input type="text" value="maVille">
     </form>
 </body>
-
-
-
-
-
-    
+-->
