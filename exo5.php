@@ -13,22 +13,22 @@ afficherInput($nomsInput);
 
 <?php
 
-// Création d'un tableau numérique :
-
+// Tableau associatif qui contient le label/Clé(Nom) et sa valeur(Delurbiac):
 $tableauInfos = [
-    "Nom",
-    "Prenom",
-    "Ville"
+    "Nom" => "Delubriac",
+    "Prénom" => "Antoine",
+    "Ville" => "Strasbourg"
 ];
 
+// Création d'une fonction qui va parcourir chaque élement du tableau : 
 function creationFormulaire($infoPersonne) {
-    echo "<form>";
-    foreach($infoPersonne as $info) {
+    echo "<form>"; // Ici on ouvre le tableau 
+    foreach($infoPersonne as $cle => $valeur) {
             echo "
-            <label for='$info'>$info</label><br>
-            <input type='text' value=$info><br>";        
-    }
-    echo "</form>";
+            <label for='$cle'>$cle</label><br> 
+            <input type='text' value='$valeur'><br>";        
+        }
+        echo "</form>";
 }
 
 // Création du tableau : 
