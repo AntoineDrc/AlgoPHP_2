@@ -11,15 +11,15 @@ repeterImage($url,4);
 <?php
 
 // Création du lien à cliquer :
-$url = '<img src="https://my.mobirise.com/data/userpic/764.jpg" alt="Image chien">';
+$urlADupliquer = '<img src="https://my.mobirise.com/data/userpic/764.jpg" alt="Image chien">';
 
-// Création d'une fonction pour ouvrir l'image 4 fois : 
-function repeterImage($url, $nb) {
-    for($i=0; $i < $nb; $i++) {
-        echo $url;
+// Construction d'une fonction pour ouvrir l'image 4 fois : 
+function repeterImage($urlADupliquer, $nbDeFois) {
+    for($i=0; $i < $nbDeFois; $i++) {
+        echo $urlADupliquer;
     }
 }
 
-repeterImage($url, 4);
+repeterImage($urlADupliquer, 4);
 
 

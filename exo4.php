@@ -32,7 +32,7 @@ $capitales = array ("France"=>"Paris","Allemagne"=>"Berlin",
             </tr>
         </thead>";
 
-// Création d'une boucle qui parcour les données du tableau : 
+// Création d'une boucle qui parcourt les données du tableau : 
 foreach ($paysCapitales as $pays => $capitales) {
     echo 
     "

@@ -19,25 +19,29 @@ $tableauChoix = [
     "Choix 3"
 ];
 
-// Structure du menu : 
+// Ouverture du menu : 
 echo "
 <fieldset>
     <legend>Faites votre choix</legend>";
 
-// Création d'une fonction qui va afficher les choix : 
-function checkbox($choix) {
-    foreach($choix as $cle) {
+// Construction d'une fonction qui va afficher les choix : 
+function checkbox($tableauAAfficher) { 
+    foreach($tableauAAfficher as $valeur) {
         echo "
         <div>
         <input type='checkbox' id='choix' name='choix'>
-        <label for='choix'>$cle</label>
+        <label for='choix'>$valeur</label>
     </div>";
     }
 }
-"</fieldset> -->";
 
 // Afficher le menu avec les choix : 
 checkbox($tableauChoix);
+
+// Fermeture du menu
+"</fieldset> -->";
+
+
 
 // Création de la structure en html :
 ?>

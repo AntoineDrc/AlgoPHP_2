@@ -26,10 +26,10 @@ echo
 <select name='Civilité' id='Civilité'>
     <option value=>--Choisir une option--</option>";
 // Création d'une fonction qui va ajouter les choix au menu déroulant : 
-function menuDeroulant($choix) {
-foreach($choix as $cle) {
+function menuDeroulant($tableauAAfficher) {
+foreach($tableauAAfficher as $valeur) {
     echo "
-    <option value='$cle'>$cle</option>";
+    <option value='$valeur'>$valeur</option>";
 }
 }
 "</select>";
