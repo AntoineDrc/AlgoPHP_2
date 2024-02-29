@@ -24,29 +24,71 @@ class Voiture {
     private $nbPortes;
     private $vitesseActuelle;
     
-    // Constructeur de la classe Voiture, appelé lors de la création d'un nouvel objet :
-    public function __construct($marque, $modele, $nbPortes, $vitesseActuelle) {
-        $this->marque = $marque;
-        $this->modele = $modele;
-        $this->nbportes = $nbPortes;
-        $this->vitesseActuelle = $vitesseActuelle;
+// Constructeur de la classe Voiture, appelé lors de la création d'un nouvel objet :
+public function __construct($marque, $modele, $nbPortes,) {
+    $this->marque = $marque;
+    $this->modele = $modele;
+    $this->nbPorte = $nbPortes;
+    $this->vitesseActuelle = 0;
+    $this->etatDuMoteur = false;
     }
 
-    // Création d'une méthode pour démarrer
+// Création d'une méthode pour démarrer
     public function demarrer() {
-
+        $this->etatDuMoteur = true;
+    echo "Le véhicule " . $this->marque . " " . $this->modele . " " . "démarre<br>";
     }
 
-    // Création d'une méthode pour accelerer
-    public function accelerer() {
-
+// Création d'une méthode pour accelerer
+    public function accelerer($vitesse) {
+    if($this->etatDuMoteur) {
+        $this->vitesseActuelle =+ $vitesse;
+        echo "Le véhicule " . $this->marque . " " . $this->modele . " accélère de " . $this->vitesseActuelle . " km / h<br>";
+    } else {
+        echo "Le véhicule " . $this->marque . " " . $this->modele . " veut accélèrer de " . $vitesse . "<br>";
+        echo "Pour accélèrer, il faut démarrer le véhicule " . $this->marque . " " . $this->modele . " !<br>";
     }
+}
 
-    // Création d'une méthode pour stopper
-    public function stopper() {
 
+// Création d'une méthode pour stopper
+public function stopper() {
+    $this->vitesseActuelle = 0;
+    $this->etatDuMoteur = false;
+    echo "Le véhicule " . $this->marque . " " . $this->modele . " est stoppé<br>";
+}
+
+// Création d'une méthode qui va nous donner la vitesse
+public function getVitesse() {
+    echo "La vitesse du véhicule " . $this->marque . " " . $this->modele . " est de : " . $this->vitesseActuelle . " km / h<br>";
+}
+
+// Création d'une méthode pour récuperer les informations
+public function getInfo() {
+    echo "Nom et modèle du véhicule : " . $this->marque . " " . $this->modele . "<br>";
+    echo "Nombre de portes : " . $this->nbPorte . "<br>";
+    if($this->etatDuMoteur) {
+        echo "Le véhicule " . $this->marque . " est" . " démarré<br>";
+    } else {
+        echo "Le véhicule " . $this->marque . " est" . " à l'arrêt<br>";
+    }
+    echo "Sa vitesse actuelle est de : " . $this->vitesseActuelle . " km / h<br>";
     }
 }
 
 // Instanciation d'objet
-$v1 = 
+$v1 = new Voiture("Peugeot", "408", 5,);
+$v2 = new Voiture("Citroën", "C4", 3,);
+
+// Test appel fonction : 
+$v1->demarrer();
+$v1->accelerer(50);
+$v2->demarrer();
+$v2->stopper();
+$v2->accelerer(20);
+$v1->getVitesse();
+$v2->getVitesse();
+echo "<br>";
+$v1->getInfo();
+echo "<br>";
+$v2->getInfo();
