@@ -53,8 +53,6 @@ echo "<form>";
 // Affichage du formulaire 
 creationFormulaire($tableauInformation);
 
-// Fermeture du tableau
-echo "</form>";
 
 
 
@@ -121,6 +119,16 @@ menuDeroulant($tableauMetier);
     
 // Fermeture du menu déroulant
 "</select>";
+
+// 4.Créer un "bouton de validation"
+
+// Création du bouton submit
+echo "
+<input type='submit' value='Envoyer le formulaire' />";
+
+
+// Fermeture du tableau
+echo "</form>";
 
 
 
