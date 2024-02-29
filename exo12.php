@@ -36,7 +36,7 @@ $tableauValeurs= [
 // Afficher les informations des variables contenues dans le tableau à l'aide de la fonction var_dump() et d'une boucle
 foreach($tableauValeurs as $valeur) {
     echo "<pre>";
-    echo var_dump($valeur);
+    echo var_dump($valeur); // var_dump sert à debug
     echo "<pre>";
 }
 
