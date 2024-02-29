@@ -20,14 +20,14 @@ L’adresse contact@elan est une adresse e-mail invalide
 $mail1 = "elan@elan-formation.fr";
 $mail2 = "contact@elan";
 
-// Création d'une fonction pour vérifier si l'e-mail1 est valide
+// Utilisation d'une fonction pour vérifier si l'e-mail1 est valide
 if (!filter_var($mail1, FILTER_VALIDATE_EMAIL)) {
     echo $mail1 . " : N'est pas valide";
     } else {
     echo $mail1 . " : Est une adresse valide";
 }
 
-echo "<br><br>";
+echo "<br><br>"; // Saut de ligne
 
 // Création d'une fonction pour vérifier si l'e-mail2 est valide
 if (!filter_var($mail2, FILTER_VALIDATE_EMAIL)) {
