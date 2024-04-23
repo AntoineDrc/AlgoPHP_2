@@ -1,15 +1,15 @@
 <h1>Exercice 2</h1>
 
 <p>
-Soit le tableau suivant :
+    Soit le tableau suivant :
 
-$capitales = array 
-("France"=>"Paris","Allemagne"=>"Berlin","USA"=>"Washington","Italie"=>"Rome");
+    $capitales = array
+    ("France"=>"Paris","Allemagne"=>"Berlin","USA"=>"Washington","Italie"=>"Rome");
 
-Réaliser un algorithme permettant d'afficher le tableau HTML suivant (notez que le nom du pays 
-s'affichera en majuscule et que le tableau est trié par ordre alphabétique du nom de pays) grâce à 
-une fonction personnalisée.
-Vous devrez appeler la fonction comme suit : afficherTableHTML($capitales);
+    Réaliser un algorithme permettant d'afficher le tableau HTML suivant (notez que le nom du pays
+    s'affichera en majuscule et que le tableau est trié par ordre alphabétique du nom de pays) grâce à
+    une fonction personnalisée.
+    Vous devrez appeler la fonction comme suit : afficherTableHTML($capitales);
 
 </p>
 
@@ -26,13 +26,13 @@ USA         Washington
 <?php
 
 // Création d'un tableau associatif :  
-$paysCapitales = ["France"=>"Paris", "Allemagne"=>"Berlin", "USA"=>"Washington", "Italie"=>"Rome"];
+$paysCapitales = ["France" => "Paris", "Allemagne" => "Berlin", "USA" => "Washington", "Italie" => "Rome"];
 
 // Trier les clés par ordre alphabétique : 
 ksort($paysCapitales);
 
 // En tête du tableau : 
-echo 
+echo
 "<table>
     <thead>
         <tr>
@@ -43,7 +43,7 @@ echo
 
 // Création d'une boucle qui parcour les données du tableau : 
 foreach ($paysCapitales as $pays => $capitales) {
-    echo 
+    echo
     "<tbody>
         <tr>
             <td>" . $pays . "</td>
@@ -52,7 +52,7 @@ foreach ($paysCapitales as $pays => $capitales) {
     </tbody>";
 }
 
-echo 
+echo
 "</table>";
 
 // <table>

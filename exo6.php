@@ -1,11 +1,11 @@
 <h1>Exercice 6</h1>
 
 <p>
-Créer une fonction personnalisée permettant de remplir une liste déroulante à partir d'un tableau 
-de valeurs.
-Exemple :
-$elements = array("Monsieur","Madame","Mademoiselle");
-alimenterListeDeroulante($elements);
+    Créer une fonction personnalisée permettant de remplir une liste déroulante à partir d'un tableau
+    de valeurs.
+    Exemple :
+    $elements = array("Monsieur","Madame","Mademoiselle");
+    alimenterListeDeroulante($elements);
 </p>
 
 <h2>Résultat</h2>
@@ -27,11 +27,12 @@ echo
     <option value=>--Choisir une option--</option>";
 
 // Construction d'une fonction qui va ajouter les choix au menu déroulant : 
-function menuDeroulant($tableauAAfficher) {
-foreach($tableauAAfficher as $valeur) {
-    echo "
+function menuDeroulant($tableauAAfficher)
+{
+    foreach ($tableauAAfficher as $valeur) {
+        echo "
     <option value='$valeur'>$valeur</option>";
-}
+    }
 }
 
 // Afficher le menu déroulant : 

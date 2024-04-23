@@ -1,11 +1,11 @@
 <h1>Exercice 10</h1>
 
 <p>
-En utilisant l’ensemble des fonctions personnalisées crées précédemment, créer un formulaire 
-complet qui contient les informations suivantes : champs de texte avec nom, prénom, adresse e-mail, ville, sexe et une liste de choix parmi lesquels on pourra sélectionner un intitulé de formation : 
-« Développeur Logiciel », « Designer web », « Intégrateur » ou « Chef de projet ».
-Le formulaire devra également comporter un bouton permettant de le soumettre à un traitement 
-de validation (submit).
+    En utilisant l’ensemble des fonctions personnalisées crées précédemment, créer un formulaire
+    complet qui contient les informations suivantes : champs de texte avec nom, prénom, adresse e-mail, ville, sexe et une liste de choix parmi lesquels on pourra sélectionner un intitulé de formation :
+    « Développeur Logiciel », « Designer web », « Intégrateur » ou « Chef de projet ».
+    Le formulaire devra également comporter un bouton permettant de le soumettre à un traitement
+    de validation (submit).
 </p>
 
 <h2>Résultat</h2>
@@ -28,20 +28,21 @@ de validation (submit).
 
 // Création d'un tableau numérique avec les valeurs à renseigner : 
 $tableauInformation = [
-    "Nom", 
+    "Nom",
     "Prenom",
     "E-mail",
     "Ville"
 ];
 
 // Construction d'une fonction qui va parcourir chaque élement du tableau : 
-function creationFormulaire($tableauAAfficher) {
-    
-// Ouverture du tableau
-echo "<form>";
-    
-// Création de la boucle
-    foreach($tableauAAfficher as $cle) {
+function creationFormulaire($tableauAAfficher)
+{
+
+    // Ouverture du tableau
+    echo "<form>";
+
+    // Création de la boucle
+    foreach ($tableauAAfficher as $cle) {
         echo "
         <div>
             <label for='$cle'>$cle</label><br> 
@@ -70,8 +71,9 @@ echo
     <legend>Sexe :</legend>";
 
 // Construction de la fonction menu radio
-function menuRadio($tableauAAfficher) {
-    foreach($tableauAAfficher as $valeur) {
+function menuRadio($tableauAAfficher)
+{
+    foreach ($tableauAAfficher as $valeur) {
         echo "
     <div>
         <input type='radio' id='choix' name='choix'
@@ -95,7 +97,7 @@ echo
 $tableauMetier = [
     "Développeur logiciel",
     "Designer web",
-    "Integrateur", 
+    "Integrateur",
     "Chef de projet"
 ];
 
@@ -107,16 +109,17 @@ echo
     <option value=>--Choisir une option--</option>";
 
 // Construction d'une fonction qui va ajouter les choix au menu déroulant : 
-function menuDeroulant($tableauAAfficher) {
-    foreach($tableauAAfficher as $valeur) {
+function menuDeroulant($tableauAAfficher)
+{
+    foreach ($tableauAAfficher as $valeur) {
         echo "
         <option value='$valeur'>$valeur</option>";
     }
-    }
-    
+}
+
 // Afficher le menu déroulant : 
 menuDeroulant($tableauMetier);
-    
+
 // Fermeture du menu déroulant
 "</select>";
 
@@ -129,13 +132,3 @@ echo "
 
 // Fermeture du tableau
 echo "</form>";
-
-
-
-
-
-
-
-
-
-

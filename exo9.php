@@ -1,10 +1,10 @@
 <h1>Exercice 9</h1>
 
 <p>
-Créer une fonction personnalisée permettant d’afficher des boutons radio avec un tableau de 
-valeurs en paramètre ("Monsieur","Madame","Mademoiselle").
-Exemple :
-afficherRadio($nomsRadio);
+    Créer une fonction personnalisée permettant d’afficher des boutons radio avec un tableau de
+    valeurs en paramètre ("Monsieur","Madame","Mademoiselle").
+    Exemple :
+    afficherRadio($nomsRadio);
 </p>
 
 <h2>Résultat</h2>
@@ -24,8 +24,9 @@ echo
     <legend>Selection du choix :</legend>";
 
 // Construction de la fonction permettant d'afficher le choix à cocher : 
-function afficherRadio($tableauAAfficher) {
-    foreach($tableauAAfficher as $valeur) {
+function afficherRadio($tableauAAfficher)
+{
+    foreach ($tableauAAfficher as $valeur) {
         echo "
     <div>
         <input type='radio' id='choix' name='choix'

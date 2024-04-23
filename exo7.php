@@ -1,11 +1,11 @@
 <h1>Exercice 7</h1>
 
 <p>
-Créer une fonction personnalisée permettant de générer des cases à cocher. On pourra préciser 
-dans le tableau associatif si la case est cochée ou non.
-Exemple :
-genererCheckbox($elements);
-//où $elements est un tableau associatif clé => valeur avec 3 entrées.
+    Créer une fonction personnalisée permettant de générer des cases à cocher. On pourra préciser
+    dans le tableau associatif si la case est cochée ou non.
+    Exemple :
+    genererCheckbox($elements);
+    //où $elements est un tableau associatif clé => valeur avec 3 entrées.
 </p>
 
 <h2>Résultat</h2>
@@ -25,8 +25,9 @@ echo "
     <legend>Faites votre choix</legend>";
 
 // Construction d'une fonction qui va afficher les choix : 
-function checkbox($tableauAAfficher) { 
-    foreach($tableauAAfficher as $valeur) {
+function checkbox($tableauAAfficher)
+{
+    foreach ($tableauAAfficher as $valeur) {
         echo "
         <div>
         <input type='checkbox' id='choix' name='choix'>
